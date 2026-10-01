@@ -1,0 +1,544 @@
+/* =========================================
+   SERVICES HERO
+========================================= */
+.services-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;   /* centers content */
+  width: 100%;               /* full width */
+  min-height: 60vh;         /* full viewport height */
+  background-image: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=85");
+  background-size: cover;    /* fills screen */
+  background-position: center;
+}
+
+.services-hero-overlay {
+  position: absolute;
+  width: 100%;                 /* full width */
+  inset: 0;                  /* covers entire hero */
+  background: rgba(22, 52, 27, 0.7);
+}
+
+.services-hero-content {
+  position: relative;
+  z-index: 2;                /* keeps text above overlay */
+  text-align: center;
+  color: #fff;
+}
+
+
+
+.services-hero h1 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(45px, 6vw, 68px);
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+}
+
+
+.services-hero p:last-child {
+
+    max-width: 600px;
+
+    color:
+        rgba(255,255,255,0.82);
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   SERVICES INTRO
+========================================= */
+
+.services-intro {
+
+    background: var(--cream);
+
+    position: relative;
+    z-index: 1;
+
+    border-top: 18px solid var(--white);
+}
+
+
+.services-intro-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 0.82fr) minmax(0, 1.18fr);
+
+    gap: 84px;
+
+    align-items: center;
+}
+
+
+.services-intro-image img {
+
+    width: 100%;
+    height: 420px;
+
+    border-radius: var(--radius);
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.services-intro-image {
+
+    padding: 10px;
+
+    background: var(--white);
+
+    border-radius: calc(var(--radius) + 4px);
+
+    box-shadow: 0 12px 30px rgba(16, 24, 18, 0.12);
+}
+
+
+.services-intro-content h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(35px, 3.6vw, 48px);
+
+    line-height: 1.15;
+
+    max-width: 620px;
+
+    margin: 14px 0 24px;
+}
+
+
+.services-intro-content p:not(.section-label) {
+
+    color: var(--text-light);
+
+    max-width: 620px;
+
+    line-height: 1.75;
+
+    margin-bottom: 18px;
+}
+
+
+.services-intro-content .btn {
+
+    margin-top: 12px;
+}
+
+
+/* =========================================
+   SERVICES LIST
+========================================= */
+
+.services-list {
+
+    background: var(--white);
+}
+
+
+.services-large-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.service-large-card {
+
+    display: grid;
+
+    grid-template-columns:
+        42% 58%;
+
+    min-height: 280px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    transition: var(--transition);
+}
+
+
+.service-large-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow: var(--shadow);
+}
+
+
+.service-large-image {
+
+    height: 100%;
+
+    min-height: 280px;
+
+    overflow: hidden;
+}
+
+
+.service-large-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease;
+}
+
+
+.service-large-card:hover
+.service-large-image img {
+
+    transform: scale(1.06);
+}
+
+
+.service-large-content {
+
+    padding: 28px;
+}
+
+
+.service-icon-large {
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--cream);
+
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+
+.service-large-content h3 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+
+.service-large-content > p {
+
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+
+.service-large-content ul {
+
+    list-style: none;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 7px;
+}
+
+
+.service-large-content li {
+
+    color: var(--text-light);
+
+    font-size: 11px;
+
+    position: relative;
+
+    padding-left: 15px;
+}
+
+
+.service-large-content li::before {
+
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--gold);
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   EXPERIENCE SECTION
+========================================= */
+
+.experience-section {
+
+    min-height: 430px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-top: 56px;
+
+    padding: 88px 0;
+
+    border-top: 12px solid var(--white);
+    border-bottom: 12px solid var(--white);
+
+    background:
+        url("https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1800&q=85");
+
+    background-size: cover;
+
+    background-position: center 58%;
+}
+
+
+.experience-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 22, 15, 0.94),
+            rgba(8, 22, 15, 0.68) 52%,
+            rgba(8, 22, 15, 0.32)
+        );
+}
+
+
+.experience-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 700px;
+
+    color: var(--white);
+
+    padding-left: 28px;
+
+    border-left: 3px solid var(--gold);
+}
+
+
+.experience-content h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(38px, 5vw, 60px);
+
+    line-height: 1.1;
+
+    margin: 14px 0 22px;
+}
+
+
+.experience-content > p:not(.section-label) {
+
+    color:
+        rgba(255,255,255,0.78);
+
+    max-width: 520px;
+
+    margin-bottom: 30px;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+.experience-content .btn {
+
+    min-width: 220px;
+
+    padding: 16px 28px;
+
+    border: 1px solid var(--gold-light);
+
+    border-radius: 8px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+}
+
+.experience-content .btn:hover {
+
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .services-large-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .services-intro-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .services-intro-image img {
+
+        height: 400px;
+    }
+
+
+    .service-large-card {
+
+        grid-template-columns: 40% 60%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .services-hero {
+
+        min-height: 420px;
+    }
+
+
+    .services-intro {
+
+        padding: 70px 0;
+    }
+
+
+    .services-intro-image img {
+
+        height: 330px;
+    }
+
+
+    .service-large-card {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .service-large-image {
+
+        height: 230px;
+
+        min-height: 230px;
+    }
+
+
+    .service-large-content {
+
+        padding: 23px;
+    }
+
+
+    .service-large-content ul {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .experience-section {
+
+        min-height: 500px;
+
+        margin-top: 36px;
+
+        padding: 72px 0;
+    }
+
+    .experience-content {
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .experience-content h2 {
+
+        font-size: 42px;
+    }
+
+}
+
+/* Keep the opening image section consistent across all pages. */
+.services-hero {
+    min-height: 500px;
+    height: 500px;
+}
+
+@media (max-width: 600px) {
+    .services-hero {
+        min-height: 400px;
+        height: 400px;
+    }
+}
