@@ -2,14 +2,10 @@
    HOME PAGE JAVASCRIPT
 ========================================= */
 
-const quickBookingForm =
-    document.getElementById("quickBookingForm");
-
-const homeCheckIn =
-    document.getElementById("homeCheckIn");
-
-const homeCheckOut =
-    document.getElementById("homeCheckOut");
+const quickBookingForm = document.getElementById("quickBookingForm");
+const homeCheckIn = document.getElementById("homeCheckIn");
+const homeCheckOut = document.getElementById("homeCheckOut");
+const homeGuests = document.getElementById("homeGuests");
 
 
 /* =========================================
@@ -20,101 +16,57 @@ if (homeCheckIn && homeCheckOut) {
 
     const today = new Date();
 
-    const year = today.getFullYear();
-
-    const month = String(
-        today.getMonth() + 1
-    ).padStart(2, "0");
-
-    const day = String(
-        today.getDate()
-    ).padStart(2, "0");
-
     const todayString =
-        `${year}-${month}-${day}`;
-
+        today.getFullYear() + "-" +
+        String(today.getMonth() + 1).padStart(2, "0") + "-" +
+        String(today.getDate()).padStart(2, "0");
 
     homeCheckIn.min = todayString;
-
     homeCheckOut.min = todayString;
 
+    homeCheckIn.addEventListener("change", function () {
 
-    homeCheckIn.addEventListener(
-        "change",
-        function () {
+        homeCheckOut.min = homeCheckIn.value || todayString;
 
-            homeCheckOut.min =
-                homeCheckIn.value;
-
-            if (
-                homeCheckOut.value &&
-                homeCheckOut.value <= homeCheckIn.value
-            ) {
-
-                homeCheckOut.value = "";
-
-            }
-
+        if (homeCheckOut.value && homeCheckOut.value <= homeCheckIn.value) {
+            homeCheckOut.value = "";
         }
-    );
+
+    });
 
 }
 
 
 /* =========================================
-   QUICK BOOKING
+   QUICK BOOKING -> BOOKING PAGE
 ========================================= */
 
 if (quickBookingForm) {
 
-    quickBookingForm.addEventListener(
-        "submit",
-        function (event) {
+    quickBookingForm.addEventListener("submit", function (event) {
 
-            event.preventDefault();
+        event.preventDefault();
 
+        const checkIn = homeCheckIn.value;
+        const checkOut = homeCheckOut.value;
+        const guests = homeGuests ? homeGuests.value : "2";
 
-            const checkIn =
-                homeCheckIn.value;
-
-            const checkOut =
-                homeCheckOut.value;
-
-
-            if (!checkIn || !checkOut) {
-
-                alert(
-                    "Please select both check-in and check-out dates."
-                );
-
-                return;
-
-            }
-
-
-            if (checkOut <= checkIn) {
-
-                alert(
-                    "Check-out date must be after check-in date."
-                );
-
-                return;
-
-            }
-
-
-            /*
-             * Redirect to booking page
-             */
-
-            const bookingUrl =
-                `pages/booking.html?checkin=${encodeURIComponent(checkIn)}&checkout=${encodeURIComponent(checkOut)}`;
-
-
-            window.location.href =
-                bookingUrl;
-
+        if (!checkIn || !checkOut) {
+            alert("Please select both check-in and check-out dates.");
+            return;
         }
-    );
+
+        if (checkOut <= checkIn) {
+            alert("Check-out date must be after check-in date.");
+            return;
+        }
+
+        window.location.href =
+            "pages/booking.html" +
+            "?checkin=" + encodeURIComponent(checkIn) +
+            "&checkout=" + encodeURIComponent(checkOut) +
+            "&guests=" + encodeURIComponent(guests);
+
+    });
 
 }

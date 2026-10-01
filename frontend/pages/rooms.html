@@ -2,1140 +2,283 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore luxury rooms and suites at GrandVista Hotel">
+    <title>Rooms &amp; Suites | GrandVista Hotel</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <meta name="description"
-          content="Explore luxury rooms and suites at GrandVista Hotel">
-
-    <title>Rooms & Suites | GrandVista Hotel</title>
-
-    <!-- Google Fonts -->
-
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-          rel="stylesheet">
-
-    <!-- Main CSS -->
-
-    <link rel="stylesheet"
-          href="../css/style.css">
-
-    <!-- Rooms CSS -->
-
-    <link rel="stylesheet"
-          href="../css/rooms.css">
-
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/rooms.css">
 </head>
 
 <body>
 
-
-<!-- =========================================
-     HEADER
-========================================= -->
-
+<!-- ========== HEADER ========== -->
 <header class="header">
-
     <div class="container navbar">
 
-        <a href="../index.html"
-           class="logo">
-
+        <a href="../index.html" class="logo">
             <span class="logo-icon">G</span>
             <span class="logo-text">
                 <strong>GrandVista</strong>
-                <small>HOTEL & RESORT</small>
+                <small>HOTEL &amp; RESORT</small>
             </span>
-
         </a>
 
-
-        <nav class="nav-menu"
-             id="navMenu">
-
-            <a href="../index.html">
-                Home
-            </a>
-
-            <a href="rooms.html"
-               class="active">
-                Rooms
-            </a>
-
-            <a href="services.html">
-                Services
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-            <a href="booking.html"
-               class="nav-btn">
-                Book Now
-            </a>
-
+        <nav class="nav-menu" id="navMenu">
+            <a href="../index.html">Home</a>
+            <a href="rooms.html" class="active">Rooms</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="booking.html" class="nav-btn">Book Now</a>
         </nav>
 
-
-        <button class="menu-toggle"
-                id="menuToggle">
-
-            ☰
-
-        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
 
     </div>
-
 </header>
 
 
-<!-- =========================================
-     PAGE HERO
-========================================= -->
-
+<!-- ========== HERO ========== -->
 <section class="rooms-hero">
-
     <div class="rooms-hero-overlay"></div>
 
     <div class="container rooms-hero-content">
-
-        <p class="section-label">
-            GRANDVISTA HOTEL
-        </p>
-
-        <h1>
-            Rooms & Suites
-        </h1>
-
-        <p>
-            Discover beautifully designed spaces
-            created for relaxation and comfort.
-        </p>
-
+        <p class="section-label">GRANDVISTA HOTEL</p>
+        <h1>Rooms &amp; Suites</h1>
+        <p>Discover beautifully designed spaces created for relaxation and comfort.</p>
     </div>
-
 </section>
 
 
-<!-- =========================================
-     ROOMS SECTION
-========================================= -->
-
+<!-- ========== ROOMS ========== -->
 <main class="rooms-page">
-
     <div class="container">
 
-
-        <!-- Page heading -->
-
         <div class="rooms-heading">
-
             <div>
-
-                <p class="section-label">
-                    FIND YOUR PERFECT ROOM
-                </p>
-
-                <h2>
-                    Choose Your Stay
-                </h2>
-
+                <p class="section-label">FIND YOUR PERFECT ROOM</p>
+                <h2>Choose Your Stay</h2>
             </div>
-
-            <p id="roomCount">
-                6 rooms available
-            </p>
-
+            <p id="roomCount">6 rooms available</p>
         </div>
 
 
-        <!-- =====================================
-             FILTERS
-        ====================================== -->
-
+        <!-- FILTERS -->
         <div class="filter-box">
 
-
             <div class="filter-group">
-
-                <label for="roomType">
-                    Room Type
-                </label>
-
+                <label for="roomType">Room Type</label>
                 <select id="roomType">
-
-                    <option value="all">
-                        All Rooms
-                    </option>
-
-                    <option value="deluxe">
-                        Deluxe
-                    </option>
-
-                    <option value="suite">
-                        Suite
-                    </option>
-
-                    <option value="premium">
-                        Premium
-                    </option>
-
+                    <option value="all">All Rooms</option>
+                    <option value="deluxe">Deluxe</option>
+                    <option value="suite">Suite</option>
+                    <option value="premium">Premium</option>
                 </select>
-
             </div>
 
-
             <div class="filter-group">
-
-                <label for="priceFilter">
-                    Maximum Price
-                </label>
-
+                <label for="priceFilter">Maximum Price</label>
                 <select id="priceFilter">
-
-                    <option value="all">
-                        Any Price
-                    </option>
-
-                    <option value="6000">
-                        Under ₹6,000
-                    </option>
-
-                    <option value="9000">
-                        Under ₹9,000
-                    </option>
-
-                    <option value="12000">
-                        Under ₹12,000
-                    </option>
-
-                    <option value="15000">
-                        Under ₹15,000
-                    </option>
-
+                    <option value="all">Any Price</option>
+                    <option value="6000">Under ₹6,000</option>
+                    <option value="9000">Under ₹9,000</option>
+                    <option value="12000">Under ₹12,000</option>
+                    <option value="15000">Under ₹15,000</option>
                 </select>
-
             </div>
-
 
             <div class="filter-group">
-
-                <label for="guestFilter">
-                    Guests
-                </label>
-
+                <label for="guestFilter">Guests</label>
                 <select id="guestFilter">
-
-                    <option value="all">
-                        Any Guests
-                    </option>
-
-                    <option value="2">
-                        2 Guests
-                    </option>
-
-                    <option value="3">
-                        3 Guests
-                    </option>
-
-                    <option value="4">
-                        4 Guests
-                    </option>
-
+                    <option value="all">Any Guests</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
                 </select>
-
             </div>
 
-
-            <button id="resetFilters"
-                    class="reset-btn">
-
-                Reset Filters
-
-            </button>
+            <button id="resetFilters" class="reset-btn">Reset Filters</button>
 
         </div>
 
-
-        <!-- =====================================
-             ROOM GRID
-        ====================================== -->
-
-
-
         <div class="room-filters">
+            <button class="room-filter-btn active" data-filter="all">All Rooms</button>
+            <button class="room-filter-btn" data-filter="deluxe">Deluxe</button>
+            <button class="room-filter-btn" data-filter="suite">Suites</button>
+            <button class="room-filter-btn" data-filter="premium">Premium</button>
+        </div>
 
-    <button
-        class="room-filter-btn active"
-        data-filter="all">
-        All Rooms
-    </button>
 
-    <button
-        class="room-filter-btn"
-        data-filter="deluxe">
-        Deluxe
-    </button>
-
-    <button
-        class="room-filter-btn"
-        data-filter="suite">
-        Suites
-    </button>
-
-    <button
-        class="room-filter-btn"
-        data-filter="premium">
-        Premium
-    </button>
-
-</div>
-        <div class="rooms-grid"
-             id="roomsGrid">
-
+        <!-- ROOM GRID -->
+        <div class="rooms-grid" id="roomsGrid">
 
             <!-- ROOM 1 -->
-
-            <article class="room-item"
-                     data-type="deluxe"
-                     data-price="5999"
-                     data-guests="2">
-
+            <article class="room-item" data-type="deluxe" data-price="5999" data-guests="2">
                 <div class="room-photo">
-
-                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80"
-                         alt="Deluxe King Room">
-
-                    <span class="room-badge">
-                        Popular
-                    </span>
-
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=80" alt="Deluxe King Room">
+                    <span class="room-badge">Popular</span>
                 </div>
-
-
                 <div class="room-details">
-
                     <div class="room-title-row">
-
-                        <h3>
-                            Deluxe King Room
-                        </h3>
-
-                        <span>
-                            ★ 4.8
-                        </span>
-
+                        <h3>Deluxe King Room</h3>
+                        <span>★ 4.8</span>
                     </div>
-
-
-                    <p class="room-description">
-
-                        A comfortable and elegant room
-                        featuring a king-size bed and
-                        beautiful city views.
-
-                    </p>
-
-
+                    <p class="room-description">A comfortable and elegant room featuring a king-size bed and beautiful city views.</p>
                     <div class="room-features">
-
-                        <span>
-                            🛏 King Bed
-                        </span>
-
-                        <span>
-                            👤 2 Guests
-                        </span>
-
-                        <span>
-                            📐 420 sq.ft
-                        </span>
-
+                        <span>🛏 King Bed</span>
+                        <span>👤 2 Guests</span>
+                        <span>📐 420 sq.ft</span>
                     </div>
-
-
                     <div class="room-bottom">
-
-                        <div>
-
-                            <strong>
-                                ₹5,999
-                            </strong>
-
-                            <small>
-                                / night
-                            </small>
-
-                        </div>
-
-                        <a href="booking.html?room=deluxe"
-   class="room-book-btn"
-   data-room="deluxe">
-
-    Book Now
-
-</a>
-
+                        <div><strong>₹5,999</strong> <small>/ night</small></div>
+                        <a href="booking.html?room=deluxe" class="room-book-btn" data-room="deluxe">Book Now</a>
                     </div>
-
                 </div>
-
             </article>
-
 
             <!-- ROOM 2 -->
-
-            <article class="room-item"
-                     data-type="deluxe"
-                     data-price="6499"
-                     data-guests="3">
-
+            <article class="room-item" data-type="deluxe" data-price="6499" data-guests="3">
                 <div class="room-photo">
-
-                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80"
-                         alt="Deluxe Twin Room">
-
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=900&q=80" alt="Deluxe Twin Room">
                 </div>
-
-
                 <div class="room-details">
-
                     <div class="room-title-row">
-
-                        <h3>
-                            Deluxe Twin Room
-                        </h3>
-
-                        <span>
-                            ★ 4.7
-                        </span>
-
+                        <h3>Deluxe Twin Room</h3>
+                        <span>★ 4.7</span>
                     </div>
-
-
-                    <p class="room-description">
-
-                        Spacious accommodation with
-                        two comfortable beds and
-                        modern amenities.
-
-                    </p>
-
-
+                    <p class="room-description">Spacious accommodation with two comfortable beds and modern amenities.</p>
                     <div class="room-features">
-
-                        <span>
-                            🛏 Twin Beds
-                        </span>
-
-                        <span>
-                            👤 3 Guests
-                        </span>
-
-                        <span>
-                            📐 450 sq.ft
-                        </span>
-
+                        <span>🛏 Twin Beds</span>
+                        <span>👤 3 Guests</span>
+                        <span>📐 450 sq.ft</span>
                     </div>
-
-
                     <div class="room-bottom">
-
-                        <div>
-
-                            <strong>
-                                ₹6,499
-                            </strong>
-
-                            <small>
-                                / night
-                            </small>
-
-                        </div>
-
-                        <a href="booking.html?room=deluxe-twin"
-   class="room-book-btn"
-   data-room="deluxe-twin">
-
-    Book Now
-
-</a>
-
+                        <div><strong>₹6,499</strong> <small>/ night</small></div>
+                        <a href="booking.html?room=deluxe-twin" class="room-book-btn" data-room="deluxe-twin">Book Now</a>
                     </div>
-
                 </div>
-
             </article>
-
 
             <!-- ROOM 3 -->
-
-            <article class="room-item"
-                     data-type="suite"
-                     data-price="8999"
-                     data-guests="3">
-
+            <article class="room-item" data-type="suite" data-price="8999" data-guests="3">
                 <div class="room-photo">
-
-                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80"
-                         alt="Executive Suite">
-
-                    <span class="room-badge">
-                        Best Seller
-                    </span>
-
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" alt="Executive Suite">
+                    <span class="room-badge">Best Seller</span>
                 </div>
-
-
                 <div class="room-details">
-
                     <div class="room-title-row">
-
-                        <h3>
-                            Executive Suite
-                        </h3>
-
-                        <span>
-                            ★ 4.9
-                        </span>
-
+                        <h3>Executive Suite</h3>
+                        <span>★ 4.9</span>
                     </div>
-
-
-                    <p class="room-description">
-
-                        A spacious suite with a separate
-                        living area, premium furniture,
-                        and workspace.
-
-                    </p>
-
-
+                    <p class="room-description">A spacious suite with a separate living area, premium furniture, and workspace.</p>
                     <div class="room-features">
-
-                        <span>
-                            🛏 King Bed
-                        </span>
-
-                        <span>
-                            👤 3 Guests
-                        </span>
-
-                        <span>
-                            📐 650 sq.ft
-                        </span>
-
+                        <span>🛏 King Bed</span>
+                        <span>👤 3 Guests</span>
+                        <span>📐 650 sq.ft</span>
                     </div>
-
-
                     <div class="room-bottom">
-
-                        <div>
-
-                            <strong>
-                                ₹8,999
-                            </strong>
-
-                            <small>
-                                / night
-                            </small>
-
-                        </div>
-
-                        <a href="booking.html?room=executive"
-   class="room-book-btn"
-   data-room="executive">
-
-    Book Now
-
-</a>
-
+                        <div><strong>₹8,999</strong> <small>/ night</small></div>
+                        <a href="booking.html?room=executive" class="room-book-btn" data-room="executive">Book Now</a>
                     </div>
-
                 </div>
-
             </article>
-
 
             <!-- ROOM 4 -->
-
-            <article class="room-item"
-                     data-type="suite"
-                     data-price="9999"
-                     data-guests="4">
-
+            <article class="room-item" data-type="suite" data-price="9999" data-guests="4">
                 <div class="room-photo">
-
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80"
-                         alt="Family Suite">
-
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80" alt="Family Suite">
                 </div>
-
-
                 <div class="room-details">
-
                     <div class="room-title-row">
-
-                        <h3>
-                            Family Suite
-                        </h3>
-
-                        <span>
-                            ★ 4.8
-                        </span>
-
+                        <h3>Family Suite</h3>
+                        <span>★ 4.8</span>
                     </div>
-
-
-                    <p class="room-description">
-
-                        Designed for families with
-                        generous space, comfortable beds,
-                        and a relaxing lounge.
-
-                    </p>
-
-
+                    <p class="room-description">Designed for families with generous space, comfortable beds, and a relaxing lounge.</p>
                     <div class="room-features">
-
-                        <span>
-                            🛏 King + Sofa
-                        </span>
-
-                        <span>
-                            👤 4 Guests
-                        </span>
-
-                        <span>
-                            📐 750 sq.ft
-                        </span>
-
+                        <span>🛏 King + Sofa</span>
+                        <span>👤 4 Guests</span>
+                        <span>📐 750 sq.ft</span>
                     </div>
-
-
                     <div class="room-bottom">
-
-                        <div>
-
-                            <strong>
-                                ₹9,999
-                            </strong>
-
-                            <small>
-                                / night
-                            </small>
-
-                        </div>
-<a href="booking.html?room=family"
-   class="room-book-btn"
-   data-room="family">
-
-    Book Now
-
-</a>
-
+                        <div><strong>₹9,999</strong> <small>/ night</small></div>
+                        <a href="booking.html?room=family" class="room-book-btn" data-room="family">Book Now</a>
                     </div>
-
                 </div>
-
             </article>
-
 
             <!-- ROOM 5 -->
-
-            <article class="room-item"
-                     data-type="premium"
-                     data-price="11999"
-                     data-guests="3">
-
+            <article class="room-item" data-type="premium" data-price="11999" data-guests="3">
                 <div class="room-photo">
-
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
-                         alt="Premium Suite">
-
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80" alt="Premium Suite">
                 </div>
-
-
                 <div class="room-details">
-
                     <div class="room-title-row">
-
-                        <h3>
-                            Premium Suite
-                        </h3>
-
-                        <span>
-                            ★ 5.0
-                        </span>
-
+                        <h3>Premium Suite</h3>
+                        <span>★ 5.0</span>
                     </div>
-
-
-                    <p class="room-description">
-
-                        Experience elevated luxury with
-                        a private lounge, premium interiors,
-                        and panoramic views.
-
-                    </p>
-
-
+                    <p class="room-description">Experience elevated luxury with a private lounge, premium interiors, and panoramic views.</p>
                     <div class="room-features">
-
-                        <span>
-                            🛏 King Bed
-                        </span>
-
-                        <span>
-                            👤 3 Guests
-                        </span>
-
-                        <span>
-                            📐 850 sq.ft
-                        </span>
-
+                        <span>🛏 King Bed</span>
+                        <span>👤 3 Guests</span>
+                        <span>📐 850 sq.ft</span>
                     </div>
-
-
                     <div class="room-bottom">
-
-                        <div>
-
-                            <strong>
-                                ₹11,999
-                            </strong>
-
-                            <small>
-                                / night
-                            </small>
-
-                        </div>
-
-                        <a href="booking.html"
-                           class="room-book-btn">
-
-                            Book Now
-
-                        </a>
-
+                        <div><strong>₹11,999</strong> <small>/ night</small></div>
+                        <a href="booking.html?room=premium" class="room-book-btn" data-room="premium">Book Now</a>
                     </div>
-
                 </div>
-
             </article>
 
-
             <!-- ROOM 6 -->
-
-            <article class="room-item"
-                     data-type="premium"
-                     data-price="14999"
-                     data-guests="4">
-
+            <article class="room-item" data-type="premium" data-price="14999" data-guests="4">
                 <div class="room-photo">
-
-                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80"
-                         alt="Presidential Suite">
-
-                    <span class="room-badge">
-                        Luxury
-                    </span>
-
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="Presidential Suite">
+                    <span class="room-badge">Luxury</span>
                 </div>
-
-
                 <div class="room-details">
-
                     <div class="room-title-row">
-
-                        <h3>
-                            Presidential Suite
-                        </h3>
-
-                        <span>
-                            ★ 5.0
-                        </span>
-
+                        <h3>Presidential Suite</h3>
+                        <span>★ 5.0</span>
                     </div>
-
-
-                    <p class="room-description">
-
-                        The ultimate GrandVista experience
-                        featuring luxury interiors and
-                        exceptional comfort.
-
-                    </p>
-
-
+                    <p class="room-description">The ultimate GrandVista experience featuring luxury interiors and exceptional comfort.</p>
                     <div class="room-features">
-
-                        <span>
-                            🛏 King Bed
-                        </span>
-
-                        <span>
-                            👤 4 Guests
-                        </span>
-
-                        <span>
-                            📐 1200 sq.ft
-                        </span>
-
+                        <span>🛏 King Bed</span>
+                        <span>👤 4 Guests</span>
+                        <span>📐 1200 sq.ft</span>
                     </div>
-
-
                     <div class="room-bottom">
-
-                        <div>
-
-                            <strong>
-                                ₹14,999
-                            </strong>
-
-                            <small>
-                                / night
-                            </small>
-
-                        </div>
-
-                        <a href="booking.html?room=premium"
-   class="room-book-btn"
-   data-room="premium">
-
-    Book Now
-
-</a>
-
+                        <div><strong>₹14,999</strong> <small>/ night</small></div>
+                        <a href="booking.html?room=presidential" class="room-book-btn" data-room="presidential">Book Now</a>
                     </div>
-
                 </div>
-
             </article>
 
         </div>
 
 
         <!-- NO RESULTS -->
-
-        <div id="noRooms"
-             class="no-rooms">
-
-            <div>
-                🔍
-            </div>
-
-            <h3>
-                No rooms found
-            </h3>
-
-            <p>
-                Try changing your filters to find
-                available rooms.
-            </p>
-
+        <div id="noRooms" class="no-rooms">
+            <div>🔍</div>
+            <h3>No rooms found</h3>
+            <p>Try changing your filters to find available rooms.</p>
         </div>
 
     </div>
-
 </main>
 
 
-<!-- =========================================
-     FOOTER
-========================================= -->
+<!-- ========== FOOTER (filled in by js/main.js) ========== -->
+<footer class="footer"></footer>
 
-<footer class="footer">
-
-    <div class="container footer-grid">
-
-
-        <div class="footer-brand">
-
-            <a href="index.html" class="logo">
-
-                <span class="logo-icon">
-                    G
-                </span>
-
-                <span class="logo-text">
-
-                    <strong>
-                        GrandVista
-                    </strong>
-
-                    <small>
-                        HOTEL & RESORT
-                    </small>
-
-                </span>
-
-            </a>
-
-
-            <p>
-                Thoughtful stays, exceptional dining and warm Pune hospitality&mdash;made personal.
-            </p>
-
-            <a href="pages/booking.html" class="footer-reserve-link">
-                Reserve your stay <span aria-hidden="true">&rarr;</span>
-            </a>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <h4>
-                Quick Links
-            </h4>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="rooms.html">
-                Rooms
-            </a>
-
-            <a href="pages/services.html">Services</a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </div>
-
-
-        <div class="footer-links footer-experience">
-
-            <h4>
-                Experience
-            </h4>
-
-            <a href="pages/services.html">
-                Dining &amp; Spa
-            </a>
-
-            <a href="pages/services.html">
-                Pool &amp; Wellness
-            </a>
-
-            <a href="pages/booking.html">
-                Special Offers
-            </a>
-
-            <a href="pages/contact.html">
-                Meetings &amp; Events
-            </a>
-
-        </div>
-
-
-        <div class="footer-contact">
-
-            <h4>
-                Contact
-            </h4>
-
-            <p>
-                📍 Pune, Maharashtra
-            </p>
-
-            <p>
-                ☎ +91 98765 43210
-            </p>
-
-            <p>
-                ✉ hello@grandvista.com
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="container footer-bottom">
-
-        <p>
-            © 2026 GrandVista Hotel. All rights reserved.
-        </p>
-
-        <div class="footer-legal">
-            <a href="#"
-               onclick="openPolicy('privacy'); return false;">
-                Privacy
-            </a>
-            <a href="#"
-               onclick="openPolicy('terms'); return false;">
-                Terms
-            </a>
-            <span>Designed in Pune</span>
-        </div>
-
-    </div>
-
-</footer>
-
-<!-- <footer class="footer">
-
-    <div class="container footer-grid">
-
-        <div>
-
-            <a href="../index.html"
-               class="logo footer-logo">
-
-                <span class="logo-icon">G</span>
-                <span class="logo-text">
-                    <strong>GrandVista</strong>
-                    <small>HOTEL & RESORT</small>
-                </span>
-
-            </a>
-
-            <p>
-                Luxury hospitality designed
-                around your comfort.
-            </p>
-
-            <a href="booking.html" class="footer-reserve-link">
-                Reserve your stay <span aria-hidden="true">&rarr;</span>
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Quick Links
-            </h4>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="rooms.html">
-                Rooms
-            </a>
-
-            <a href="services.html">
-                Services
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Contact
-            </h4>
-
-            <p>
-                📍 Pune, Maharashtra
-            </p>
-
-            <p>
-                📞 +91 98765 43210
-            </p>
-
-            <p>
-                ✉ hello@grandvista.com
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Guest Services
-            </h4>
-
-            <a href="booking.html">
-                Book a Stay
-            </a>
-
-            <a href="services.html">
-                Dining &amp; Spa
-            </a>
-
-            <a href="contact.html">
-                Meetings &amp; Events
-            </a>
-
-            <a href="contact.html">
-                Airport Transfers
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="container footer-bottom">
-
-    <p>
-        © 2026 GrandVista Hotel.
-        All Rights Reserved.
-    </p>
-
-    <div class="footer-legal">
-    
-        <a href="services.html?policy=privacy">
-            Privacy
-        </a>
-    
-        <a href="services.html?policy=terms">
-            Terms
-        </a>
-    
-        <a href="services.html?policy=cancellation">
-            Cancellation
-        </a>
-    
-        <span>
-            Designed in Pune
-        </span>
-    
-    </div>
-
-</div>
-
-</footer> -->
-
-
-<!-- JavaScript -->
 
 <script src="../js/main.js"></script>
-
 <script src="../js/rooms.js"></script>
 
 </body>
-
 </html>

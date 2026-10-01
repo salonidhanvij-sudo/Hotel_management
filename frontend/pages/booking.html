@@ -2,1240 +2,399 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Book your stay at GrandVista Hotel">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your stay at GrandVista Hotel">
     <title>Book Your Stay | GrandVista Hotel</title>
 
-    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-          rel="stylesheet">
-
-    <!-- Main CSS -->
-
-    <link rel="stylesheet"
-          href="../css/style.css">
-
-    <!-- Booking CSS -->
-
-    <link rel="stylesheet"
-          href="../css/booking.css">
-
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/booking.css">
 </head>
 
-<body class="booking-page">
+<body>
 
-
-<!-- =========================================
-     HEADER
-========================================= -->
-
+<!-- ========== HEADER ========== -->
 <header class="header">
-
     <div class="container navbar">
 
-        <a href="../index.html"
-           class="logo">
-
+        <a href="../index.html" class="logo">
             <span class="logo-icon">G</span>
             <span class="logo-text">
                 <strong>GrandVista</strong>
-                <small>HOTEL & RESORT</small>
+                <small>HOTEL &amp; RESORT</small>
             </span>
-
         </a>
 
-
-        <nav class="nav-menu"
-             id="navMenu">
-
-            <a href="../index.html">
-                Home
-            </a>
-
-            <a href="rooms.html">
-                Rooms
-            </a>
-
-            <a href="services.html">
-                Services
-            </a>
-
-            <a href="about.html">
-                About
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-            <a href="booking.html"
-               class="nav-btn active">
-                Book Now
-            </a>
-
+        <nav class="nav-menu" id="navMenu">
+            <a href="../index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="booking.html" class="nav-btn active">Book Now</a>
         </nav>
 
-
-        <button class="menu-toggle"
-                id="menuToggle"
-                aria-label="Open navigation">
-
-            ☰
-
-        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
 
     </div>
-
 </header>
 
 
-<!-- =========================================
-     BOOKING HERO
-========================================= -->
-
+<!-- ========== HERO ========== -->
 <section class="booking-hero">
-
     <div class="booking-hero-overlay"></div>
 
     <div class="container booking-hero-content">
-
-        <p class="section-label">
-            GRANDVISTA HOTEL
-        </p>
-
-        <h1>
-            Book Your Stay
-        </h1>
-
-        <p>
-            Complete your reservation in just a few
-            simple steps.
-        </p>
-
+        <p class="section-label">GRANDVISTA HOTEL</p>
+        <h1>Book Your Stay</h1>
+        <p>Complete your reservation in just a few simple steps.</p>
     </div>
-
 </section>
 
 
-<!-- =========================================
-     BOOKING SECTION
-========================================= -->
-
-<main class="booking-page">
-
+<!-- ========== BOOKING ========== -->
+<main class="booking-main">
     <div class="container">
 
         <form id="bookingForm">
 
             <div class="booking-layout">
 
-
-                <!-- =================================
-                     LEFT SIDE
-                ================================== -->
-
+                <!-- LEFT SIDE -->
                 <div class="booking-form">
 
-
-                    <!-- ROOM SELECTION -->
-
+                    <!-- 01 ROOM -->
                     <section class="booking-card">
-
                         <div class="booking-card-heading">
-
-                            <div class="step-number">
-                                01
-                            </div>
-
+                            <div class="step-number">01</div>
                             <div>
-
-                                <h2>
-                                    Select Your Room
-                                </h2>
-
-                                <p>
-                                    Choose the room that
-                                    suits your stay.
-                                </p>
-
+                                <h2>Select Your Room</h2>
+                                <p>Choose the room that suits your stay.</p>
                             </div>
-
                         </div>
 
-
                         <div class="form-group">
-
-                            <label for="room">
-
-                                Room Type
-                                <span>*</span>
-
-                            </label>
-
-                            <select id="room"
-                                    name="room"
-                                    required>
-
-                                <option value="">
-                                    Select a room
-                                </option>
-
-                                <option value="deluxe"
-                                        data-price="5999">
-
-                                    Deluxe King Room — ₹5,999/night
-
-                                </option>
-
-                                <option value="deluxe-twin"
-                                        data-price="6499">
-
-                                    Deluxe Twin Room — ₹6,499/night
-
-                                </option>
-
-                                <option value="executive"
-                                        data-price="8999">
-
-                                    Executive Suite — ₹8,999/night
-
-                                </option>
-
-                                <option value="family"
-                                        data-price="9999">
-
-                                    Family Suite — ₹9,999/night
-
-                                </option>
-
-                                <option value="premium"
-                                        data-price="11999">
-
-                                    Premium Suite — ₹11,999/night
-
-                                </option>
-
-                                <option value="presidential"
-                                        data-price="14999">
-
-                                    Presidential Suite — ₹14,999/night
-
-                                </option>
-
+                            <label for="room">Room Type <span>*</span></label>
+                            <select id="room" name="room" required>
+                                <option value="">Select a room</option>
+                                <option value="deluxe" data-price="5999">Deluxe King Room — ₹5,999/night</option>
+                                <option value="deluxe-twin" data-price="6499">Deluxe Twin Room — ₹6,499/night</option>
+                                <option value="executive" data-price="8999">Executive Suite — ₹8,999/night</option>
+                                <option value="family" data-price="9999">Family Suite — ₹9,999/night</option>
+                                <option value="premium" data-price="11999">Premium Suite — ₹11,999/night</option>
+                                <option value="presidential" data-price="14999">Presidential Suite — ₹14,999/night</option>
                             </select>
-
                         </div>
-
                     </section>
 
-
-                    <!-- DATES -->
-
+                    <!-- 02 DATES -->
                     <section class="booking-card">
-
                         <div class="booking-card-heading">
-
-                            <div class="step-number">
-                                02
-                            </div>
-
+                            <div class="step-number">02</div>
                             <div>
-
-                                <h2>
-                                    Choose Your Dates
-                                </h2>
-
-                                <p>
-                                    Select your check-in
-                                    and check-out dates.
-                                </p>
-
+                                <h2>Choose Your Dates</h2>
+                                <p>Select your check-in and check-out dates.</p>
                             </div>
-
                         </div>
-
 
                         <div class="form-row">
-
-
                             <div class="form-group">
-
-                                <label for="checkin">
-
-                                    Check-in
-                                    <span>*</span>
-
-                                </label>
-
-                                <input type="date"
-                                       id="checkin"
-                                       name="checkin"
-                                       required>
-
+                                <label for="checkin">Check-in <span>*</span></label>
+                                <input type="date" id="checkin" name="checkin" required>
                             </div>
 
-
                             <div class="form-group">
-
-                                <label for="checkout">
-
-                                    Check-out
-                                    <span>*</span>
-
-                                </label>
-
-                                <input type="date"
-                                       id="checkout"
-                                       name="checkout"
-                                       required>
-
+                                <label for="checkout">Check-out <span>*</span></label>
+                                <input type="date" id="checkout" name="checkout" required>
                             </div>
-
                         </div>
-
                     </section>
 
-
-                    <!-- GUESTS -->
-
+                    <!-- 03 GUESTS -->
                     <section class="booking-card">
-
                         <div class="booking-card-heading">
-
-                            <div class="step-number">
-                                03
-                            </div>
-
+                            <div class="step-number">03</div>
                             <div>
-
-                                <h2>
-                                    Guests
-                                </h2>
-
-                                <p>
-                                    Tell us how many guests
-                                    will be staying.
-                                </p>
-
+                                <h2>Guests</h2>
+                                <p>Tell us how many guests will be staying.</p>
                             </div>
-
                         </div>
 
-
                         <div class="form-row">
-
-
                             <div class="form-group">
-
-                                <label for="adults">
-
-                                    Adults
-                                    <span>*</span>
-
-                                </label>
-
-                                <select id="adults"
-                                        name="adults">
-
-                                    <option value="1">
-                                        1 Adult
-                                    </option>
-
-                                    <option value="2"
-                                            selected>
-
-                                        2 Adults
-
-                                    </option>
-
-                                    <option value="3">
-                                        3 Adults
-                                    </option>
-
-                                    <option value="4">
-                                        4 Adults
-                                    </option>
-
+                                <label for="adults">Adults <span>*</span></label>
+                                <select id="adults" name="adults">
+                                    <option value="1">1 Adult</option>
+                                    <option value="2" selected>2 Adults</option>
+                                    <option value="3">3 Adults</option>
+                                    <option value="4">4 Adults</option>
                                 </select>
-
                             </div>
 
-
                             <div class="form-group">
-
-                                <label for="children">
-
-                                    Children
-
-                                </label>
-
-                                <select id="children"
-                                        name="children">
-
-                                    <option value="0">
-                                        No Children
-                                    </option>
-
-                                    <option value="1">
-                                        1 Child
-                                    </option>
-
-                                    <option value="2">
-                                        2 Children
-                                    </option>
-
-                                    <option value="3">
-                                        3 Children
-                                    </option>
-
+                                <label for="children">Children</label>
+                                <select id="children" name="children">
+                                    <option value="0">No Children</option>
+                                    <option value="1">1 Child</option>
+                                    <option value="2">2 Children</option>
+                                    <option value="3">3 Children</option>
                                 </select>
-
                             </div>
-
                         </div>
-
                     </section>
 
-
-                    <!-- GUEST INFORMATION -->
-
+                    <!-- 04 GUEST INFORMATION -->
                     <section class="booking-card">
-
                         <div class="booking-card-heading">
-
-                            <div class="step-number">
-                                04
-                            </div>
-
+                            <div class="step-number">04</div>
                             <div>
-
-                                <h2>
-                                    Guest Information
-                                </h2>
-
-                                <p>
-                                    Enter the primary guest details.
-                                </p>
-
+                                <h2>Guest Information</h2>
+                                <p>Enter the primary guest details.</p>
                             </div>
-
                         </div>
-
 
                         <div class="form-row">
-
-
                             <div class="form-group">
-
-                                <label for="firstName">
-
-                                    First Name
-                                    <span>*</span>
-
-                                </label>
-
-                                <input type="text"
-                                       id="firstName"
-                                       name="firstName"
-                                       placeholder="Enter first name"
-                                       required>
-
+                                <label for="firstName">First Name <span>*</span></label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
                             </div>
 
-
                             <div class="form-group">
-
-                                <label for="lastName">
-
-                                    Last Name
-                                    <span>*</span>
-
-                                </label>
-
-                                <input type="text"
-                                       id="lastName"
-                                       name="lastName"
-                                       placeholder="Enter last name"
-                                       required>
-
+                                <label for="lastName">Last Name <span>*</span></label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
                             </div>
-
                         </div>
-
 
                         <div class="form-row">
-
-
                             <div class="form-group">
-
-                                <label for="email">
-
-                                    Email Address
-                                    <span>*</span>
-
-                                </label>
-
-                                <input type="email"
-                                       id="email"
-                                       name="email"
-                                       placeholder="you@example.com"
-                                       required>
-
+                                <label for="email">Email Address <span>*</span></label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
                             </div>
 
-
                             <div class="form-group">
-
-                                <label for="phone">
-
-                                    Phone Number
-                                    <span>*</span>
-
-                                </label>
-
-                                <input type="tel"
-                                       id="phone"
-                                       name="phone"
-                                       placeholder="+91 98765 43210"
-                                       required>
-
+                                <label for="phone">Phone Number <span>*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
                             </div>
-
                         </div>
-
                     </section>
 
-
-                    <!-- SPECIAL REQUESTS -->
-
+                    <!-- 05 SPECIAL REQUESTS -->
                     <section class="booking-card">
-
                         <div class="booking-card-heading">
-
-                            <div class="step-number">
-                                05
-                            </div>
-
+                            <div class="step-number">05</div>
                             <div>
-
-                                <h2>
-                                    Special Requests
-                                </h2>
-
-                                <p>
-                                    Let us know if you need anything
-                                    special during your stay.
-                                </p>
-
+                                <h2>Special Requests</h2>
+                                <p>Let us know if you need anything special during your stay.</p>
                             </div>
-
                         </div>
-
 
                         <div class="form-group">
-
-                            <label for="requests">
-
-                                Special Requests
-                                <small>(Optional)</small>
-
-                            </label>
-
-                            <textarea id="requests"
-                                      name="requests"
-                                      rows="5"
+                            <label for="requests">Special Requests <small>(Optional)</small></label>
+                            <textarea id="requests" name="requests" rows="5"
                                       placeholder="Early check-in, extra bed, airport transfer, etc."></textarea>
-
                         </div>
-
                     </section>
 
                     <!-- TERMS -->
-
                     <div class="terms-box">
-
                         <label class="checkbox-label">
-
-                            <input type="checkbox"
-                                   id="terms"
-                                   required>
-
-                            <span>
-                                I agree to the hotel booking
-                                terms and cancellation policy.
-                            </span>
-
+                            <input type="checkbox" id="terms" required>
+                            <span>I agree to the hotel booking terms and cancellation policy.</span>
                         </label>
-
                     </div>
 
-
-                   
-                    <!-- =========================================
-     PAYMENT SECTION
-========================================= -->
-
-<section class="payment-section" id="paymentSection">
-
-    <div class="payment-container">
-
-        <!-- PAYMENT HEADER -->
-
-        <div class="payment-header">
-
-            <span class="section-label">
-                SECURE PAYMENT
-            </span>
-
-            <h2>
-                Complete Your Booking
-            </h2>
-
-            <p>
-                Review your booking details and choose your
-                preferred payment method.
-            </p>
-
-        </div>
+                    <!-- CONTINUE -->
+                    <button type="submit" class="confirm-btn">Continue to Payment</button>
 
 
-        <div class="payment-layout">
+                    <!-- ========== PAYMENT (shown after the form is submitted) ========== -->
+                    <section class="payment-section" id="paymentSection">
+                        <div class="payment-container">
 
+                            <div class="payment-header">
+                                <span class="section-label">SECURE PAYMENT</span>
+                                <h2>Complete Your Booking</h2>
+                                <p>Review your booking details and choose your preferred payment method.</p>
+                            </div>
 
-            <!-- =================================
-                 PAYMENT FORM
-            ================================== -->
+                            <div class="payment-layout">
 
-            <div class="payment-card">
+                                <!-- PAYMENT FORM -->
+                                <div class="payment-card">
 
-                <div class="payment-card-header">
+                                    <div class="payment-card-header">
+                                        <div>
+                                            <h3>Payment Details</h3>
+                                            <p>Choose your preferred payment method</p>
+                                        </div>
+                                        <span class="secure-badge">🔒 Secure</span>
+                                    </div>
 
-                    <div>
-                        <h3>Payment Details</h3>
+                                    <div class="payment-methods">
+                                        <button type="button" class="payment-method active" data-method="card">
+                                            <span class="method-icon">💳</span><span>Card</span>
+                                        </button>
+                                        <button type="button" class="payment-method" data-method="upi">
+                                            <span class="method-icon">📱</span><span>UPI</span>
+                                        </button>
+                                        <button type="button" class="payment-method" data-method="netbanking">
+                                            <span class="method-icon">🏦</span><span>Net Banking</span>
+                                        </button>
+                                    </div>
 
-                        <p>
-                            Choose your preferred payment method
-                        </p>
-                    </div>
+                                    <!-- CARD -->
+                                    <div class="payment-method-content active" id="cardPayment">
 
-                    <span class="secure-badge">
-                        🔒 Secure
-                    </span>
+                                        <div class="form-group">
+                                            <label for="cardName">Cardholder Name</label>
+                                            <input type="text" id="cardName" placeholder="Enter cardholder name" autocomplete="off">
+                                        </div>
 
-                </div>
+                                        <div class="form-group">
+                                            <label for="cardNumber">Card Number</label>
+                                            <div class="card-input-wrapper">
+                                                <input type="text" id="cardNumber" maxlength="19"
+                                                       placeholder="1234 5678 9012 3456" inputmode="numeric" autocomplete="off">
+                                                <span class="card-icon">💳</span>
+                                            </div>
+                                        </div>
 
+                                        <div class="card-row">
+                                            <div class="form-group">
+                                                <label for="expiryDate">Expiry Date</label>
+                                                <input type="text" id="expiryDate" maxlength="5"
+                                                       placeholder="MM/YY" inputmode="numeric" autocomplete="off">
+                                            </div>
 
-                <!-- PAYMENT METHODS -->
+                                            <div class="form-group">
+                                                <label for="cvv">CVV</label>
+                                                <input type="password" id="cvv" maxlength="3"
+                                                       placeholder="•••" inputmode="numeric" autocomplete="off">
+                                            </div>
+                                        </div>
 
-                <div class="payment-methods">
+                                    </div>
 
-                    <button
-                        type="button"
-                        class="payment-method active"
-                        data-method="card">
+                                    <!-- UPI -->
+                                    <div class="payment-method-content" id="upiPayment">
+                                        <div class="form-group">
+                                            <label for="upiId">UPI ID</label>
+                                            <input type="text" id="upiId" placeholder="example@upi" autocomplete="off">
+                                        </div>
 
-                        <span class="method-icon">
-                            💳
-                        </span>
+                                        <div class="upi-info">
+                                            <span>📱</span>
+                                            <p>Enter your UPI ID to continue with the payment.</p>
+                                        </div>
+                                    </div>
 
-                        <span>
-                            Card
-                        </span>
+                                    <!-- NET BANKING -->
+                                    <div class="payment-method-content" id="netbankingPayment">
+                                        <div class="form-group">
+                                            <label for="bankSelect">Select Your Bank</label>
+                                            <select id="bankSelect">
+                                                <option value="">Select Bank</option>
+                                                <option value="sbi">State Bank of India</option>
+                                                <option value="hdfc">HDFC Bank</option>
+                                                <option value="icici">ICICI Bank</option>
+                                                <option value="axis">Axis Bank</option>
+                                                <option value="kotak">Kotak Mahindra Bank</option>
+                                            </select>
+                                        </div>
+                                    </div>
 
-                    </button>
+                                    <button type="button" class="pay-now-button" id="payNowButton">
+                                        <span>Pay</span>
+                                        <strong id="payButtonAmount">₹0</strong>
+                                    </button>
 
+                                    <p class="payment-security-text">
+                                        🔒 This is a demo payment interface. No real payment will be processed.
+                                    </p>
 
-                    <button
-                        type="button"
-                        class="payment-method"
-                        data-method="upi">
+                                </div>
 
-                        <span class="method-icon">
-                            📱
-                        </span>
+                                <!-- ORDER SUMMARY -->
+                                <div class="payment-order-card">
 
-                        <span>
-                            UPI
-                        </span>
+                                    <h3>Booking Summary</h3>
 
-                    </button>
+                                    <div class="order-room">
+                                        <div class="room-placeholder">GV</div>
+                                        <div>
+                                            <strong id="paymentRoom">Select Room</strong>
+                                            <span>GrandVista Hotel</span>
+                                        </div>
+                                    </div>
 
+                                    <div class="order-details">
+                                        <div class="order-row"><span>Check-in</span><strong id="paymentCheckin">—</strong></div>
+                                        <div class="order-row"><span>Check-out</span><strong id="paymentCheckout">—</strong></div>
+                                        <div class="order-row"><span>Guests</span><strong id="paymentGuests">—</strong></div>
+                                    </div>
 
-                    <button
-                        type="button"
-                        class="payment-method"
-                        data-method="netbanking">
+                                    <div class="order-divider"></div>
 
-                        <span class="method-icon">
-                            🏦
-                        </span>
+                                    <div class="order-price">
+                                        <span>Total Amount</span>
+                                        <strong id="paymentAmount">₹0</strong>
+                                    </div>
 
-                        <span>
-                            Net Banking
-                        </span>
+                                    <div class="payment-features">
+                                        <div>✓ Secure checkout</div>
+                                        <div>✓ Instant confirmation</div>
+                                        <div>✓ No payment information stored</div>
+                                    </div>
 
-                    </button>
+                                </div>
 
-                </div>
-
-
-                <!-- =================================
-                     CARD PAYMENT
-                ================================== -->
-
-                <div
-                    class="payment-method-content active"
-                    id="cardPayment">
-
-                    <div class="form-group">
-
-                        <label for="cardName">
-                            Cardholder Name
-                        </label>
-
-                        <input
-                            type="text"
-                            id="cardName"
-                            placeholder="Enter cardholder name"
-                            autocomplete="off">
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="cardNumber">
-                            Card Number
-                        </label>
-
-                        <div class="card-input-wrapper">
-
-                            <input
-                                type="text"
-                                id="cardNumber"
-                                maxlength="19"
-                                placeholder="1234 5678 9012 3456"
-                                inputmode="numeric"
-                                autocomplete="off">
-
-                            <span class="card-icon">
-                                💳
-                            </span>
-
+                            </div>
                         </div>
-
-                    </div>
-
-
-                    <div class="card-row">
-
-                        <div class="form-group">
-
-                            <label for="expiryDate">
-                                Expiry Date
-                            </label>
-
-                            <input
-                                type="text"
-                                id="expiryDate"
-                                maxlength="5"
-                                placeholder="MM/YY"
-                                inputmode="numeric"
-                                autocomplete="off">
-
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="cvv">
-                                CVV
-                            </label>
-
-                            <input
-                                type="password"
-                                id="cvv"
-                                maxlength="3"
-                                placeholder="•••"
-                                inputmode="numeric"
-                                autocomplete="off">
-
-                        </div>
-
-                    </div>
+                    </section>
 
                 </div>
 
 
-                <!-- =================================
-                     UPI PAYMENT
-                ================================== -->
-
-                <div
-                    class="payment-method-content"
-                    id="upiPayment">
-
-                    <div class="form-group">
-
-                        <label for="upiId">
-                            UPI ID
-                        </label>
-
-                        <input
-                            type="text"
-                            id="upiId"
-                            placeholder="example@upi"
-                            autocomplete="off">
-
-                    </div>
-
-                    <div class="upi-info">
-
-                        <span>📱</span>
-
-                        <p>
-                            Enter your UPI ID to continue
-                            with the payment.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =================================
-                     NET BANKING
-                ================================== -->
-
-                <div
-                    class="payment-method-content"
-                    id="netbankingPayment">
-
-                    <div class="form-group">
-
-                        <label for="bankSelect">
-                            Select Your Bank
-                        </label>
-
-                        <select id="bankSelect">
-
-                            <option value="">
-                                Select Bank
-                            </option>
-
-                            <option value="sbi">
-                                State Bank of India
-                            </option>
-
-                            <option value="hdfc">
-                                HDFC Bank
-                            </option>
-
-                            <option value="icici">
-                                ICICI Bank
-                            </option>
-
-                            <option value="axis">
-                                Axis Bank
-                            </option>
-
-                            <option value="kotak">
-                                Kotak Mahindra Bank
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PAYMENT BUTTON -->
-
-                <button
-                    type="button"
-                    class="pay-now-button"
-                    id="payNowButton">
-
-                    <span>
-                        Pay
-                    </span>
-
-                    <strong id="payButtonAmount">
-                        ₹0
-                    </strong>
-
-                </button>
-
-
-                <p class="payment-security-text">
-
-                    🔒 This is a secure demo payment interface.
-                    No real payment will be processed.
-
-                </p>
-
-            </div>
-
-
-            <!-- =================================
-                 ORDER SUMMARY
-            ================================== -->
-
-            <div class="payment-order-card">
-
-                <h3>
-                    Booking Summary
-                </h3>
-
-
-                <div class="order-room">
-
-                    <div class="room-placeholder">
-                        GV
-                    </div>
-
-                    <div>
-
-                        <strong id="paymentRoom">
-                            Select Room
-                        </strong>
-
-                        <span>
-                            GrandVista Hotel
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="order-details">
-
-                    <div class="order-row">
-
-                        <span>
-                            Check-in
-                        </span>
-
-                        <strong id="paymentCheckin">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div class="order-row">
-
-                        <span>
-                            Check-out
-                        </span>
-
-                        <strong id="paymentCheckout">
-                            —
-                        </strong>
-
-                    </div>
-
-
-                    <div class="order-row">
-
-                        <span>
-                            Guests
-                        </span>
-
-                        <strong id="paymentGuests">
-                            —
-                        </strong>
-
-                    </div>
-
-                </div>
-
-
-                <div class="order-divider"></div>
-
-
-                <div class="order-price">
-
-                    <span>
-                        Total Amount
-                    </span>
-
-                    <strong id="paymentAmount">
-                        ₹0
-                    </strong>
-
-                </div>
-
-
-                <div class="payment-features">
-
-                    <div>
-                        ✓ Secure checkout
-                    </div>
-
-                    <div>
-                        ✓ Instant confirmation
-                    </div>
-
-                    <div>
-                        ✓ No payment information stored
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================
-     PAYMENT SUCCESS MODAL
-========================================= -->
-
-<div
-    class="payment-success-modal"
-    id="paymentSuccessModal">
-
-    <div class="success-modal-content">
-
-        <button
-            type="button"
-            class="success-close"
-            id="successClose">
-            ×
-        </button>
-
-
-        <div class="success-icon">
-            ✓
-        </div>
-
-
-        <span class="success-label">
-            PAYMENT SUCCESSFUL
-        </span>
-
-
-        <h2>
-            Booking Confirmed
-        </h2>
-
-
-        <p>
-            Your payment has been successfully processed
-            in this demo environment.
-        </p>
-
-
-        <div class="success-booking-id">
-
-            <span>
-                Booking ID
-            </span>
-
-            <strong id="demoBookingId">
-                GV000000
-            </strong>
-
-        </div>
-
-
-        <div class="success-message">
-
-            Thank you for choosing
-            <strong>GrandVista Hotel</strong>.
-
-        </div>
-
-
-        <button
-            type="button"
-            class="success-done-button"
-            id="successDone">
-
-            Done
-
-        </button>
-
-    </div>
-
-</div>
-
-
-    
-                </div>
-
-
-                <!-- =================================
-                     RIGHT SIDE - SUMMARY
-                ================================== -->
-
+                <!-- RIGHT SIDE - SUMMARY -->
                 <aside class="booking-summary">
-
                     <div class="summary-card">
 
-                        <h2>
-                            Booking Summary
-                        </h2>
-
-
-                        <!-- Selected room -->
+                        <h2>Booking Summary</h2>
 
                         <div class="summary-room">
-
                             <img id="summaryImage"
-                                src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80"
-                                alt="Selected room"
->
+                                 src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80"
+                                 alt="Selected room">
                             <div>
-
-                                <h3 id="summaryRoom">
-                                    Select a room
-                                </h3>
-
-                                <p id="summaryRating">
-                                    ★ 4.8
-                                </p>
-
+                                <h3 id="summaryRoom">Select a room</h3>
+                                <p id="summaryRating">★ 4.8</p>
                             </div>
-
                         </div>
-
-
-                        <!-- Summary details -->
 
                         <div class="summary-details">
-
-
-                            <div class="summary-row">
-
-                                <span>
-                                    Check-in
-                                </span>
-
-                                <strong id="summaryCheckin">
-                                    —
-                                </strong>
-
-                            </div>
-
-
-                            <div class="summary-row">
-
-                                <span>
-                                    Check-out
-                                </span>
-
-                                <strong id="summaryCheckout">
-                                    —
-                                </strong>
-
-                            </div>
-
-
-                            <div class="summary-row">
-
-                                <span>
-                                    Guests
-                                </span>
-
-                                <strong id="summaryGuests">
-                                    2 Adults
-                                </strong>
-
-                            </div>
-
-
-                            <div class="summary-row">
-
-                                <span>
-                                    Nights
-                                </span>
-
-                                <strong id="summaryNights">
-                                    0
-                                </strong>
-
-                            </div>
-
+                            <div class="summary-row"><span>Check-in</span><strong id="summaryCheckin">—</strong></div>
+                            <div class="summary-row"><span>Check-out</span><strong id="summaryCheckout">—</strong></div>
+                            <div class="summary-row"><span>Guests</span><strong id="summaryGuests">2 Guests</strong></div>
+                            <div class="summary-row"><span>Nights</span><strong id="summaryNights">0</strong></div>
                         </div>
-
-
-                        <!-- Price -->
 
                         <div class="price-breakdown">
-
-                            <div class="summary-row">
-
-                                <span>
-                                    Room price
-                                </span>
-
-                                <strong id="roomPrice">
-                                    ₹0
-                                </strong>
-
-                            </div>
-
-
-                            <div class="summary-row">
-
-                                <span>
-                                    Taxes & fees
-                                </span>
-
-                                <strong id="taxPrice">
-                                    ₹0
-                                </strong>
-
-                            </div>
-
+                            <div class="summary-row"><span>Room price</span><strong id="roomPrice">₹0</strong></div>
+                            <div class="summary-row"><span>Taxes &amp; fees (12%)</span><strong id="taxPrice">₹0</strong></div>
                         </div>
-
 
                         <div class="total-row">
-
-                            <span>
-                                Total
-                            </span>
-
-                            <strong id="totalPrice">
-                                ₹0
-                            </strong>
-
+                            <span>Total</span>
+                            <strong id="totalPrice">₹0</strong>
                         </div>
 
-
-                        <p class="secure-note">
-
-                            🔒 Your booking information
-                            is secure.
-
-                        </p>
+                        <p class="secure-note">🔒 Your booking information is secure.</p>
 
                     </div>
-
                 </aside>
 
             </div>
@@ -1243,183 +402,44 @@
         </form>
 
     </div>
-
 </main>
 
 
-<!-- =========================================
-     SUCCESS MODAL
-========================================= -->
+<!-- ========== PAYMENT SUCCESS MODAL ========== -->
+<div class="payment-success-modal" id="paymentSuccessModal">
+    <div class="success-modal-content">
 
-<div class="modal"
-     id="successModal">
+        <button type="button" class="success-close" id="successClose" aria-label="Close">×</button>
 
-    <div class="modal-content">
+        <div class="success-icon">✓</div>
 
-        <button class="modal-close"
-                id="closeModal">
+        <span class="success-label">PAYMENT SUCCESSFUL</span>
 
-            ×
+        <h2>Booking Confirmed</h2>
 
-        </button>
+        <p>Your payment has been successfully processed in this demo environment.</p>
 
-
-        <div class="success-icon">
-            ✓
+        <div class="success-booking-id">
+            <span>Booking ID</span>
+            <strong id="demoBookingId">GV000000</strong>
         </div>
 
-
-        <h2>
-            Booking Confirmed!
-        </h2>
-
-
-        <p>
-            Thank you for choosing GrandVista.
-            Your booking request has been successfully
-            submitted.
-        </p>
-
-
-        <div class="confirmation-number">
-
-            Booking ID:
-            <strong id="bookingId">
-                GV000000
-            </strong>
-
+        <div class="success-message">
+            Thank you for choosing <strong>GrandVista Hotel</strong>.
         </div>
 
-
-        <button class="btn btn-primary"
-                id="doneButton">
-
-            Done
-
-        </button>
+        <button type="button" class="success-done-button" id="successDone">Done</button>
 
     </div>
-
 </div>
 
 
-<!-- =========================================
-     FOOTER
-========================================= -->
-
-<footer class="footer">
-
-    <div class="container footer-grid">
-
-        <div>
-
-            <a href="../index.html"
-               class="logo footer-logo">
-
-                <span class="logo-icon">G</span>
-                <span class="logo-text">
-                    <strong>GrandVista</strong>
-                    <small>HOTEL & RESORT</small>
-                </span>
-
-            </a>
-
-            <p>
-                Thoughtful stays, attentive service, and
-                refined comfort in the heart of Pune.
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Quick Links
-            </h4>
-
-            <a href="../index.html">
-                Home
-            </a>
-
-            <a href="rooms.html">
-                Rooms
-            </a>
-
-            <a href="services.html">
-                Services
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </div>
-
-
-        <div>
-
-            <h4>
-                Contact
-            </h4>
-
-            <p>
-                📍 Pune, Maharashtra
-            </p>
-
-            <p>
-                📞 +91 98765 43210
-            </p>
-
-            <p>
-                ✉ hello@grandvista.com
-            </p>
-
-        </div>
-
-        <div>
-
-            <h4>
-                Guest Services
-            </h4>
-
-            <a href="services.html">
-                Dining & Wellness
-            </a>
-
-            <a href="services.html">
-                Events & Meetings
-            </a>
-
-            <a href="contact.html">
-                Concierge Assistance
-            </a>
-
-            <a href="services.html?policy=faqs">
-                Frequently Asked Questions
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 GrandVista Hotel.
-            All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
+<!-- ========== FOOTER (filled in by js/main.js) ========== -->
+<footer class="footer"></footer>
 
 
 <script src="../js/main.js"></script>
-
 <script src="../js/booking.js"></script>
 
 </body>
-
 </html>

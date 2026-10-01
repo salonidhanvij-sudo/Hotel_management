@@ -2,1157 +2,403 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>GrandVista Hotel | Luxury Hotel & Resort</title>
-
-    <meta
-        name="description"
-        content="Experience refined hospitality, luxury rooms, fine dining and unforgettable stays at GrandVista Hotel."
-    >
+    <meta name="description" content="Experience refined hospitality, luxury rooms, fine dining and unforgettable stays at GrandVista Hotel.">
 
     <!-- Google Fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- Main CSS -->
-
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Home CSS -->
-
     <link rel="stylesheet" href="css/home.css">
-
-    <!-- Dashboard CSS -->
-    <link rel="stylesheet" href="../assets/css/dashboard.css">
-
 </head>
-
 
 <body>
 
-
-<!-- =========================================
-     HEADER
-========================================= -->
-<div class="dashboard">
-  <h2>Hotel Analytics Dashboard</h2>
-  <p>Total Revenue: <span id="revenue"></span></p>
-  <p>Occupancy Rate: <span id="occupancy"></span></p>
-  <p>Average Stay Duration: <span id="stay"></span></p>
-  <p>Payment Distribution: <span id="payments"></span></p>
-</div>
-
+<!-- ========== HEADER ========== -->
 <header class="header">
-
     <div class="container navbar">
 
-
         <a href="index.html" class="logo">
-
-            <span class="logo-icon">
-                G
-            </span>
-
+            <span class="logo-icon">G</span>
             <span class="logo-text">
-
-                <strong>
-                    GrandVista
-                </strong>
-
-                <small>
-                    HOTEL & RESORT
-                </small>
-
+                <strong>GrandVista</strong>
+                <small>HOTEL &amp; RESORT</small>
             </span>
-
         </a>
 
-
         <nav class="nav-menu">
-
-            <a href="index.html" class="active">
-                Home
-            </a>
-
-            <a href="pages/rooms.html">
-                Rooms
-            </a>
-
-            <a href="pages/services.html">
-                Services
-            </a>
-
-            <a href="pages/about.html">
-                About
-            </a>
-
-            <a href="pages/contact.html">
-                Contact
-            </a>
-
-            <a href="pages/booking.html" class="nav-btn">
-                Book Now
-            </a>
-
+            <a href="index.html" class="active">Home</a>
+            <a href="pages/rooms.html">Rooms</a>
+            <a href="pages/services.html">Services</a>
+            <a href="pages/about.html">About</a>
+            <a href="pages/contact.html">Contact</a>
+            <a href="pages/booking.html" class="nav-btn">Book Now</a>
         </nav>
 
-
-        <button
-            class="menu-toggle"
-            id="menuToggle"
-            aria-label="Open navigation menu"
-        >
-            ☰
-        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">☰</button>
 
     </div>
-
 </header>
 
 
-
-<!-- =========================================
-     HERO
-========================================= -->
-
+<!-- ========== HERO ========== -->
 <section class="home-hero">
-
     <div class="home-hero-overlay"></div>
 
-
     <div class="container home-hero-content">
+        <p class="section-label">WELCOME TO GRANDVISTA</p>
 
-        <p class="section-label">
-            WELCOME TO GRANDVISTA
-        </p>
-
-
-        <h1>
-            Where Luxury<br>
-            Meets <span>Hospitality</span>
-        </h1>
-
+        <h1>Where Luxury<br>Meets <span>Hospitality</span></h1>
 
         <p class="hero-description">
-            Experience elegant rooms, exceptional dining,
-            thoughtful service and unforgettable moments
-            in the heart of Pune.
+            Experience elegant rooms, exceptional dining, thoughtful service
+            and unforgettable moments in the heart of Pune.
         </p>
 
-
         <div class="hero-buttons">
-
-            <a
-                href="pages/booking.html"
-                class="btn btn-primary"
-            >
-                Book Your Stay
-            </a>
-
-
-            <a
-                href="pages/rooms.html"
-                class="btn hero-outline-btn"
-            >
-                Explore Rooms
-            </a>
-
+            <a href="pages/booking.html" class="btn btn-primary">Book Your Stay</a>
+            <a href="pages/rooms.html" class="btn hero-outline-btn">Explore Rooms</a>
         </div>
-
     </div>
-
-
-    <!-- Scroll Indicator -->
 
     <div class="scroll-indicator">
-
-        <span>
-            SCROLL TO EXPLORE
-        </span>
-
+        <span>SCROLL TO EXPLORE</span>
         <div class="scroll-line"></div>
-
     </div>
-
 </section>
 
 
-
-<!-- =========================================
-     QUICK BOOKING BAR
-========================================= -->
-
+<!-- ========== QUICK BOOKING ========== -->
 <section class="quick-booking-section">
-
     <div class="container">
-
-        <form
-            class="quick-booking"
-            id="quickBookingForm"
-        >
-
+        <form class="quick-booking" id="quickBookingForm">
 
             <div class="booking-field">
-
-                <label for="homeCheckIn">
-                    CHECK-IN
-                </label>
-
-                <input
-                    type="date"
-                    id="homeCheckIn"
-                    required
-                >
-
+                <label for="homeCheckIn">CHECK-IN</label>
+                <input type="date" id="homeCheckIn" required>
             </div>
 
-
             <div class="booking-field">
-
-                <label for="homeCheckOut">
-                    CHECK-OUT
-                </label>
-
-                <input
-                    type="date"
-                    id="homeCheckOut"
-                    required
-                >
-
+                <label for="homeCheckOut">CHECK-OUT</label>
+                <input type="date" id="homeCheckOut" required>
             </div>
 
-
             <div class="booking-field">
-
-                <label for="homeGuests">
-                    GUESTS
-                </label>
-
+                <label for="homeGuests">GUESTS</label>
                 <select id="homeGuests">
-
-                    <option value="1">
-                        1 Guest
-                    </option>
-
-                    <option value="2" selected>
-                        2 Guests
-                    </option>
-
-                    <option value="3">
-                        3 Guests
-                    </option>
-
-                    <option value="4">
-                        4 Guests
-                    </option>
-
-                    <option value="5">
-                        5+ Guests
-                    </option>
-
+                    <option value="1">1 Guest</option>
+                    <option value="2" selected>2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5+ Guests</option>
                 </select>
-
             </div>
 
-
-            <button
-                type="submit"
-                class="btn btn-primary booking-search-btn"
-            >
-                Check Availability
-            </button>
+            <button type="submit" class="btn btn-primary booking-search-btn">Check Availability</button>
 
         </form>
-
     </div>
-
 </section>
 
 
-<!-- =========================================
-     WELCOME / ABOUT
-========================================= -->
-
+<!-- ========== ABOUT ========== -->
 <section class="section home-about">
-
     <div class="container home-about-grid">
-
-        <!-- =====================================
-             ABOUT IMAGES
-        ====================================== -->
 
         <div class="home-about-images">
 
-            <!-- Main Image -->
             <div class="home-about-main-image">
-                <img
-                    src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85"
-                    alt="GrandVista Hotel exterior"
-                >
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1000&q=85" alt="GrandVista Hotel exterior">
             </div>
 
-
-            <!-- Small Image -->
             <div class="home-about-small-image">
-                <img
-                    src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=700&q=85"
-                    alt="Luxury hotel interior"
-                >
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=700&q=85" alt="Luxury hotel interior">
             </div>
 
-
-            <!-- Experience Badge -->
             <div class="home-about-badge">
-
                 <strong>15+</strong>
-
-                <span>
-                    Years of<br>
-                    Excellence
-                </span>
-
+                <span>Years of<br>Excellence</span>
             </div>
 
         </div>
 
-
-        <!-- =====================================
-             ABOUT CONTENT
-        ====================================== -->
-
         <div class="home-about-content">
+            <p class="section-label">THE GRANDVISTA STORY</p>
 
-            <!-- Section Label -->
-            <p class="section-label">
-                THE GRANDVISTA STORY
-            </p>
-
-
-            <!-- Heading -->
-            <h2>
-                A Place Designed<br>
-                <span>For Remarkable Stays</span>
-            </h2>
-
-
-            <!-- Description -->
-            <p>
-                GrandVista Hotel brings together timeless
-                elegance, modern comfort and genuine
-                hospitality to create an experience that
-                stays with you long after you leave.
-            </p>
-
+            <h2>A Place Designed<br><span>For Remarkable Stays</span></h2>
 
             <p>
-                From beautifully designed rooms to
-                exceptional dining and personalized service,
-                every detail has been carefully considered
-                for your comfort.
+                GrandVista Hotel brings together timeless elegance, modern comfort
+                and genuine hospitality to create an experience that stays with you
+                long after you leave.
             </p>
 
+            <p>
+                From beautifully designed rooms to exceptional dining and personalized
+                service, every detail has been carefully considered for your comfort.
+            </p>
 
-            <!-- Highlights -->
             <div class="about-highlights">
-
-                <!-- Highlight 1 -->
-                <div class="about-highlight">
-
-                    <strong>120+</strong>
-
-                    <span>
-                        Luxury Rooms
-                    </span>
-
-                </div>
-
-
-                <!-- Highlight 2 -->
-                <div class="about-highlight">
-
-                    <strong>50K+</strong>
-
-                    <span>
-                        Happy Guests
-                    </span>
-
-                </div>
-
-
-                <!-- Highlight 3 -->
-                <div class="about-highlight">
-
-                    <strong>4.9</strong>
-
-                    <span>
-                        Guest Rating
-                    </span>
-
-                </div>
-
+                <div class="about-highlight"><strong>120+</strong><span>Luxury Rooms</span></div>
+                <div class="about-highlight"><strong>50K+</strong><span>Happy Guests</span></div>
+                <div class="about-highlight"><strong>4.9</strong><span>Guest Rating</span></div>
             </div>
 
-
-            <!-- Link -->
-            <a
-                href="pages/about.html"
-                class="text-link"
-            >
-                Discover Our Story
-                <span>→</span>
-            </a>
-
+            <a href="pages/about.html" class="text-link">Discover Our Story <span>→</span></a>
         </div>
 
     </div>
-
 </section>
 
-<!-- =========================================
-     FEATURED ROOMS
-========================================= -->
 
+<!-- ========== FEATURED ROOMS ========== -->
 <section class="section featured-rooms">
-
     <div class="container">
 
-
         <div class="section-heading centered">
-
-            <p class="section-label">
-                STAY IN COMFORT
-            </p>
-
-            <h2 class="our">
-                Our Featured Rooms
-            </h2>
-
-            <p>
-                Elegant spaces designed for relaxation,
-                comfort and unforgettable stays.
-            </p>
-
+            <p class="section-label">STAY IN COMFORT</p>
+            <h2>Our Featured Rooms</h2>
+            <p>Elegant spaces designed for relaxation, comfort and unforgettable stays.</p>
         </div>
-
 
         <div class="featured-room-grid">
 
-
-            <!-- Room 1 -->
-
             <article class="featured-room-card">
-
                 <div class="featured-room-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85"
-                        alt="Deluxe King Room"
-                    >
-
-                    <span class="room-badge">
-                        POPULAR
-                    </span>
-
+                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1000&q=85" alt="Deluxe King Room">
+                    <span class="room-badge">POPULAR</span>
                 </div>
-
-
                 <div class="featured-room-content">
-
-                    <div class="room-rating">
-                        ★★★★★
-                        <span>
-                            4.9
-                        </span>
-                    </div>
-
-
-                    <h3>
-                        Deluxe King Room
-                    </h3>
-
-
-                    <p>
-                        Spacious and elegant room with
-                        premium bedding and city views.
-                    </p>
-
-
+                    <div class="room-rating">★★★★★ <span>4.9</span></div>
+                    <h3>Deluxe King Room</h3>
+                    <p>Spacious and elegant room with premium bedding and city views.</p>
                     <div class="room-card-bottom">
-
-                        <div>
-
-                            <strong>
-                                ₹5,999
-                            </strong>
-
-                            <span>
-                                / night
-                            </span>
-
-                        </div>
-
-
-                        <a
-                            href="pages/booking.html?room=deluxe-king"
-                            class="room-link"
-                        >
-                            View Room →
-                        </a>
-
+                        <div><strong>₹5,999</strong> <span>/ night</span></div>
+                        <a href="pages/booking.html?room=deluxe" class="room-link">View Room →</a>
                     </div>
-
                 </div>
-
             </article>
 
-
-
-            <!-- Room 2 -->
-
             <article class="featured-room-card">
-
                 <div class="featured-room-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1000&q=85"
-                        alt="Executive Suite"
-                    >
-
+                    <img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?auto=format&fit=crop&w=1000&q=85" alt="Executive Suite">
                 </div>
-
-
                 <div class="featured-room-content">
-
-                    <div class="room-rating">
-                        ★★★★★
-                        <span>
-                            4.9
-                        </span>
-                    </div>
-
-
-                    <h3>
-                        Executive Suite
-                    </h3>
-
-
-                    <p>
-                        A sophisticated suite featuring
-                        separate living and sleeping areas.
-                    </p>
-
-
+                    <div class="room-rating">★★★★★ <span>4.9</span></div>
+                    <h3>Executive Suite</h3>
+                    <p>A sophisticated suite featuring separate living and sleeping areas.</p>
                     <div class="room-card-bottom">
-
-                        <div>
-
-                            <strong>
-                                ₹8,999
-                            </strong>
-
-                            <span>
-                                / night
-                            </span>
-
-                        </div>
-
-
-                        <a
-                            href="pages/booking.html?room=executive-suite"
-                            class="room-link"
-                        >
-                            View Room →
-                        </a>
-
+                        <div><strong>₹8,999</strong> <span>/ night</span></div>
+                        <a href="pages/booking.html?room=executive" class="room-link">View Room →</a>
                     </div>
-
                 </div>
-
             </article>
 
-
-
-            <!-- Room 3 -->
-
             <article class="featured-room-card">
-
                 <div class="featured-room-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1000&q=85"
-                        alt="Presidential Suite"
-                    >
-
-                    <span class="room-badge luxury">
-                        LUXURY
-                    </span>
-
+                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=1000&q=85" alt="Presidential Suite">
+                    <span class="room-badge luxury">LUXURY</span>
                 </div>
-
-
                 <div class="featured-room-content">
-
-                    <div class="room-rating">
-                        ★★★★★
-                        <span>
-                            5.0
-                        </span>
-                    </div>
-
-
-                    <h3>
-                        Presidential Suite
-                    </h3>
-
-
-                    <p>
-                        The ultimate GrandVista experience
-                        with exceptional space and luxury.
-                    </p>
-
-
+                    <div class="room-rating">★★★★★ <span>5.0</span></div>
+                    <h3>Presidential Suite</h3>
+                    <p>The ultimate GrandVista experience with exceptional space and luxury.</p>
                     <div class="room-card-bottom">
-
-                        <div>
-
-                            <strong>
-                                ₹14,999
-                            </strong>
-
-                            <span>
-                                / night
-                            </span>
-
-                        </div>
-
-
-                        <a
-                            href="pages/booking.html?room=presidential-suite"
-                            class="room-link"
-                        >
-                            View Room →
-                        </a>
-
+                        <div><strong>₹14,999</strong> <span>/ night</span></div>
+                        <a href="pages/booking.html?room=presidential" class="room-link">View Room →</a>
                     </div>
-
                 </div>
-
             </article>
 
         </div>
 
-
         <div class="center-button">
-
-            <a
-                href="pages/rooms.html"
-                class="btn btn-outline"
-            >
-                View All Rooms
-            </a>
-
+            <a href="pages/rooms.html" class="btn btn-outline">View All Rooms</a>
         </div>
 
     </div>
-
 </section>
 
 
-
-<!-- =========================================
-     SERVICES
-========================================= -->
-
+<!-- ========== SERVICES ========== -->
 <section class="section home-services">
-
     <div class="container">
 
-
         <div class="section-heading centered">
-
-            <p class="section-label">
-                GRANDVISTA EXPERIENCE
-            </p>
-
-            <h2>
-                Everything You Need
-            </h2>
-
-            <p>
-                Thoughtfully designed amenities to make
-                every moment of your stay special.
-            </p>
-
+            <p class="section-label">GRANDVISTA EXPERIENCE</p>
+            <h2>Everything You Need</h2>
+            <p>Thoughtfully designed amenities to make every moment of your stay special.</p>
         </div>
-
 
         <div class="home-services-grid">
 
-
-            <a
-                href="pages/services.html"
-                class="home-service-card"
-            >
-
-                <div class="home-service-icon">
-                    ✦
-                </div>
-
-                <h3>
-                    Luxury Spa
-                </h3>
-
-                <p>
-                    Relax, refresh and rejuvenate with
-                    our signature spa treatments.
-                </p>
-
-                <span>
-                    Explore Service →
-                </span>
-
+            <a href="pages/services.html" class="home-service-card">
+                <div class="home-service-icon">✦</div>
+                <h3>Luxury Spa</h3>
+                <p>Relax, refresh and rejuvenate with our signature spa treatments.</p>
+                <span>Explore Service →</span>
             </a>
 
-
-            <a
-                href="pages/services.html"
-                class="home-service-card"
-            >
-
-                <div class="home-service-icon">
-                    ◈
-                </div>
-
-                <h3>
-                    Fine Dining
-                </h3>
-
-                <p>
-                    Discover carefully crafted dishes
-                    prepared by our expert chefs.
-                </p>
-
-                <span>
-                    Explore Service →
-                </span>
-
+            <a href="pages/services.html" class="home-service-card">
+                <div class="home-service-icon">◈</div>
+                <h3>Fine Dining</h3>
+                <p>Discover carefully crafted dishes prepared by our expert chefs.</p>
+                <span>Explore Service →</span>
             </a>
 
-
-            <a
-                href="pages/services.html"
-                class="home-service-card"
-            >
-
-                <div class="home-service-icon">
-                    ○
-                </div>
-
-                <h3>
-                    Swimming Pool
-                </h3>
-
-                <p>
-                    Unwind beside our beautiful pool
-                    surrounded by a peaceful atmosphere.
-                </p>
-
-                <span>
-                    Explore Service →
-                </span>
-
+            <a href="pages/services.html" class="home-service-card">
+                <div class="home-service-icon">○</div>
+                <h3>Swimming Pool</h3>
+                <p>Unwind beside our beautiful pool surrounded by a peaceful atmosphere.</p>
+                <span>Explore Service →</span>
             </a>
 
-
-            <a
-                href="pages/services.html"
-                class="home-service-card"
-            >
-
-                <div class="home-service-icon">
-                    ♡
-                </div>
-
-                <h3>
-                    24/7 Room Service
-                </h3>
-
-                <p>
-                    Whatever you need, our team is ready
-                    to assist you around the clock.
-                </p>
-
-                <span>
-                    Explore Service →
-                </span>
-
+            <a href="pages/services.html" class="home-service-card">
+                <div class="home-service-icon">♡</div>
+                <h3>24/7 Room Service</h3>
+                <p>Whatever you need, our team is ready to assist you around the clock.</p>
+                <span>Explore Service →</span>
             </a>
 
         </div>
 
-
         <div class="center-button">
-
-            <a
-                href="pages/services.html"
-                class="text-link"
-            >
-                Explore All Services →
-            </a>
-
+            <a href="pages/services.html" class="text-link">Explore All Services →</a>
         </div>
 
     </div>
-
 </section>
 
 
-
-<!-- =========================================
-     WHY CHOOSE US
-========================================= -->
-
+<!-- ========== WHY GRANDVISTA ========== -->
 <section class="why-grandvista">
 
     <div class="why-image">
-
-        <img
-            src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=85"
-            alt="GrandVista luxury hotel"
-            loading="lazy"
-            decoding="async"
-        >
-
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=85"
+             alt="GrandVista luxury hotel" loading="lazy" decoding="async">
     </div>
 
-
     <div class="why-content">
+        <p class="section-label">WHY GRANDVISTA</p>
 
-        <p class="section-label">
-            WHY GRANDVISTA
-        </p>
-
-
-        <h2>
-            More Than A Hotel.<br>
-            <span>An Experience.</span>
-        </h2>
-
+        <h2>More Than A Hotel.<br><span>An Experience.</span></h2>
 
         <p>
-            We believe luxury is not simply about beautiful
-            spaces. It is about how you feel when you are
-            there.
+            We believe luxury is not simply about beautiful spaces. It is about
+            how you feel when you are there.
         </p>
-
 
         <div class="why-list">
 
-
             <div class="why-item">
-
-                <div class="why-number">
-                    01
-                </div>
-
+                <div class="why-number">01</div>
                 <div>
-
-                    <h3>
-                        Personalized Service
-                    </h3>
-
-                    <p>
-                        Our team takes time to understand
-                        and anticipate your needs.
-                    </p>
-
+                    <h3>Personalized Service</h3>
+                    <p>Our team takes time to understand and anticipate your needs.</p>
                 </div>
-
             </div>
 
-
             <div class="why-item">
-
-                <div class="why-number">
-                    02
-                </div>
-
+                <div class="why-number">02</div>
                 <div>
-
-                    <h3>
-                        Prime Location
-                    </h3>
-
-                    <p>
-                        Conveniently located in one of
-                        Pune's most vibrant neighbourhoods.
-                    </p>
-
+                    <h3>Prime Location</h3>
+                    <p>Conveniently located in one of Pune's most vibrant neighbourhoods.</p>
                 </div>
-
             </div>
 
-
             <div class="why-item">
-
-                <div class="why-number">
-                    03
-                </div>
-
+                <div class="why-number">03</div>
                 <div>
-
-                    <h3>
-                        Uncompromising Quality
-                    </h3>
-
-                    <p>
-                        From our rooms to our restaurants,
-                        excellence is our everyday standard.
-                    </p>
-
+                    <h3>Uncompromising Quality</h3>
+                    <p>From our rooms to our restaurants, excellence is our everyday standard.</p>
                 </div>
-
             </div>
 
         </div>
-
     </div>
 
 </section>
 
 
-
-<!-- =========================================
-     TESTIMONIALS
-========================================= -->
-
+<!-- ========== TESTIMONIALS ========== -->
 <section class="section home-testimonials">
-
     <div class="container">
 
-
         <div class="section-heading centered">
-
-            <p class="section-label">
-                GUEST STORIES
-            </p>
-
-            <h2>
-                Loved By Our Guests
-            </h2>
-
-            <p>
-                Discover why guests choose GrandVista
-                again and again.
-            </p>
-
+            <p class="section-label">GUEST STORIES</p>
+            <h2>Loved By Our Guests</h2>
+            <p>Discover why guests choose GrandVista again and again.</p>
         </div>
-
 
         <div class="home-testimonial-grid">
 
-
             <div class="home-testimonial-card">
-
-                <div class="home-stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    "An absolutely beautiful hotel. The
-                    rooms were spotless, the staff were
-                    incredibly helpful and the breakfast
-                    was fantastic."
-                </p>
-
+                <div class="home-stars">★★★★★</div>
+                <p>"An absolutely beautiful hotel. The rooms were spotless, the staff were incredibly helpful and the breakfast was fantastic."</p>
                 <div class="home-guest">
-
-                    <div class="home-avatar">
-                        A
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Aditi Rao
-                        </strong>
-
-                        <span>
-                            Mumbai, India
-                        </span>
-
-                    </div>
-
+                    <div class="home-avatar">A</div>
+                    <div><strong>Aditi Rao</strong><span>Mumbai, India</span></div>
                 </div>
-
             </div>
 
-
-
             <div class="home-testimonial-card">
-
-                <div class="home-stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    "GrandVista exceeded all our expectations.
-                    Everything from check-in to checkout was
-                    smooth and genuinely welcoming."
-                </p>
-
+                <div class="home-stars">★★★★★</div>
+                <p>"GrandVista exceeded all our expectations. Everything from check-in to checkout was smooth and genuinely welcoming."</p>
                 <div class="home-guest">
-
-                    <div class="home-avatar">
-                        R
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Rahul Verma
-                        </strong>
-
-                        <span>
-                            Delhi, India
-                        </span>
-
-                    </div>
-
+                    <div class="home-avatar">R</div>
+                    <div><strong>Rahul Verma</strong><span>Delhi, India</span></div>
                 </div>
-
             </div>
 
-
-
             <div class="home-testimonial-card">
-
-                <div class="home-stars">
-                    ★★★★★
-                </div>
-
-                <p>
-                    "We celebrated our anniversary here and
-                    the team made every detail special.
-                    We are already planning our next visit."
-                </p>
-
+                <div class="home-stars">★★★★★</div>
+                <p>"We celebrated our anniversary here and the team made every detail special. We are already planning our next visit."</p>
                 <div class="home-guest">
-
-                    <div class="home-avatar">
-                        S
-                    </div>
-
-                    <div>
-
-                        <strong>
-                            Sneha Patel
-                        </strong>
-
-                        <span>
-                            Ahmedabad, India
-                        </span>
-
-                    </div>
-
+                    <div class="home-avatar">S</div>
+                    <div><strong>Sneha Patel</strong><span>Ahmedabad, India</span></div>
                 </div>
-
             </div>
 
         </div>
 
     </div>
-
 </section>
 
 
-
-<!-- =========================================
-     GALLERY
-========================================= -->
-
+<!-- ========== GALLERY ========== -->
 <section class="home-gallery">
 
     <div class="gallery-heading">
-
-        <p class="section-label">
-            A GLIMPSE OF GRANDVISTA
-        </p>
-
-        <h2>
-            Moments Worth Remembering
-        </h2>
-
-        <p>
-            A glimpse into the thoughtful details,
-            beautiful spaces and memorable moments
-            waiting at GrandVista.
-        </p>
-
+        <p class="section-label">A GLIMPSE OF GRANDVISTA</p>
+        <h2>Moments Worth Remembering</h2>
+        <p>A glimpse into the thoughtful details, beautiful spaces and memorable moments waiting at GrandVista.</p>
     </div>
-
 
     <div class="gallery-grid">
 
-
         <div class="gallery-item gallery-large">
-
-            <img
-                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85"
-                alt="GrandVista hotel"
-            >
-
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=85" alt="GrandVista hotel">
         </div>
 
-
         <div class="gallery-item">
-
-            <img
-                src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=85"
-                alt="Luxury hotel room"
-            >
-
+            <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&w=800&q=85" alt="Luxury hotel room">
         </div>
 
-
         <div class="gallery-item">
-
-            <img
-                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=85"
-                alt="Fine dining"
-            >
-
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=85" alt="Fine dining">
         </div>
 
-
         <div class="gallery-item">
-
-            <img
-                src="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?auto=format&fit=crop&w=800&q=85"
-                alt="Hotel swimming pool"
-            >
-
+            <img src="https://images.unsplash.com/photo-1576610616656-d3aa5d1f4534?auto=format&fit=crop&w=800&q=85" alt="Hotel swimming pool">
         </div>
 
-
         <div class="gallery-item">
-
-            <img
-                src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=85"
-                alt="Hotel spa"
-            >
-
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=85" alt="Hotel spa">
         </div>
 
     </div>
@@ -1160,299 +406,64 @@
 </section>
 
 
-
-<!-- =========================================
-     SPECIAL OFFER
-========================================= -->
-
+<!-- ========== SPECIAL OFFER ========== -->
 <section class="special-offer">
-
     <div class="special-offer-overlay"></div>
-
 
     <div class="container special-offer-content">
 
         <div>
-
-            <p class="section-label">
-                LIMITED TIME OFFER
-            </p>
-
-            <h2>
-                Stay Longer.<br>
-                Experience More.
-            </h2>
-
-            <p>
-                Enjoy exclusive benefits when you book
-                your next GrandVista escape.
-            </p>
-
+            <p class="section-label">LIMITED TIME OFFER</p>
+            <h2>Stay Longer.<br>Experience More.</h2>
+            <p>Enjoy exclusive benefits when you book your next GrandVista escape.</p>
         </div>
-
 
         <div class="offer-box">
-
-            <span>
-                SPECIAL OFFER
-            </span>
-
-            <strong>
-                15% OFF
-            </strong>
-
-            <small>
-                ON SELECTED STAYS
-            </small>
-
-            <a
-                href="pages/booking.html"
-                class="btn btn-primary"
-            >
-                Book This Offer
-            </a>
-
+            <span>SPECIAL OFFER</span>
+            <strong>15% OFF</strong>
+            <small>ON SELECTED STAYS</small>
+            <a href="pages/booking.html" class="btn btn-primary">Book This Offer</a>
         </div>
 
     </div>
-
 </section>
 
 
-
-<!-- =========================================
-     FINAL CTA
-========================================= -->
-
+<!-- ========== FINAL CTA ========== -->
 <section class="home-final-cta">
-
     <div class="container home-final-content">
 
-        <p class="section-label">
-            YOUR GRANDVISTA EXPERIENCE AWAITS
-        </p>
+        <p class="section-label">YOUR GRANDVISTA EXPERIENCE AWAITS</p>
 
+        <h2>Make Your Next Stay<br><span>Something Special.</span></h2>
 
-        <h2>
-            Make Your Next Stay<br>
-            <span>Something Special.</span>
-        </h2>
-
-
-        <p>
-            Relax, reconnect and experience hospitality
-            designed around you.
-        </p>
-
+        <p>Relax, reconnect and experience hospitality designed around you.</p>
 
         <div class="hero-buttons">
-
-            <a
-                href="pages/booking.html"
-                class="btn btn-primary"
-            >
-                Book Your Stay
-            </a>
-
-            <a
-                href="pages/contact.html"
-                class="btn btn-outline-light"
-            >
-                Contact Us
-            </a>
-
+            <a href="pages/booking.html" class="btn btn-primary">Book Your Stay</a>
+            <a href="pages/contact.html" class="btn btn-outline-light">Contact Us</a>
         </div>
 
     </div>
-
 </section>
 
 
-
-<!-- =========================================
-     FOOTER
-========================================= -->
-
-<footer class="footer">
-
-    <div class="container footer-grid">
+<!-- ========== FOOTER (filled in by js/main.js) ========== -->
+<footer class="footer"></footer>
 
 
-        <div class="footer-brand">
-
-            <a href="index.html" class="logo">
-
-                <span class="logo-icon">
-                    G
-                </span>
-
-                <span class="logo-text">
-
-                    <strong>
-                        GrandVista
-                    </strong>
-
-                    <small>
-                        HOTEL & RESORT
-                    </small>
-
-                </span>
-
-            </a>
-
-
-            <p>
-                Thoughtful stays, exceptional dining and warm Pune hospitality&mdash;made personal.
-            </p>
-
-            <a href="pages/booking.html" class="footer-reserve-link">
-                Reserve your stay <span aria-hidden="true">&rarr;</span>
-            </a>
-
-        </div>
-
-
-        <div class="footer-links">
-
-            <h4>
-                Quick Links
-            </h4>
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="pages/rooms.html">
-                Rooms
-            </a>
-
-            <a href="pages/services.html">
-                Services
-            </a>
-
-            <a href="pages/about.html">
-                About
-            </a>
-
-            <a href="pages/contact.html">
-                Contact
-            </a>
-
-        </div>
-
-
-        <div class="footer-links footer-experience">
-
-            <h4>
-                Experience
-            </h4>
-
-            <a href="pages/services.html">
-                Dining &amp; Spa
-            </a>
-
-            <a href="pages/services.html">
-                Pool &amp; Wellness
-            </a>
-
-            <a href="pages/booking.html">
-                Special Offers
-            </a>
-
-            <a href="pages/contact.html">
-                Meetings &amp; Events
-            </a>
-
-        </div>
-
-
-        <div class="footer-contact">
-
-            <h4>
-                Contact
-            </h4>
-
-            <p>
-                📍 Pune, Maharashtra
-            </p>
-
-            <p>
-                ☎ +91 98765 43210
-            </p>
-
-            <p>
-                ✉ hello@grandvista.com
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="container footer-bottom">
-
-        <p>
-            © 2026 GrandVista Hotel. All rights reserved.
-        </p>
-
-        <div class="footer-legal">
-            <a href="#"
-               onclick="openPolicy('privacy'); return false;">
-                Privacy
-            </a>
-            <a href="#"
-               onclick="openPolicy('terms'); return false;">
-                Terms
-            </a>
-            <span>Designed in Pune</span>
-        </div>
-
-    </div>
-
-</footer>
-
-<!-- POLICY MODAL -->
-<div id="policyModal"
-     class="policy-modal"
-     aria-hidden="true">
-
-    <div class="policy-box"
-         role="dialog"
-         aria-modal="true"
-         aria-labelledby="policyTitle">
-
-        <button type="button"
-                class="policy-close"
-                onclick="closePolicy()"
-                aria-label="Close policy">
-            &times;
-        </button>
-
+<!-- ========== POLICY MODAL ========== -->
+<div id="policyModal" class="policy-modal" aria-hidden="true">
+    <div class="policy-box" role="dialog" aria-modal="true" aria-labelledby="policyTitle">
+        <button type="button" class="policy-close" onclick="closePolicy()" aria-label="Close policy">&times;</button>
         <h2 id="policyTitle">Privacy Policy</h2>
         <div id="policyContent"></div>
-
     </div>
 </div>
 
 
-
-<!-- Main JavaScript -->
-
 <script src="js/main.js"></script>
-
-
-<!-- Home Page JavaScript -->
-
 <script src="js/home.js"></script>
 
-<!-- Dashboard JavaScript -->
-<script src="../js/dashboard.js"></script>
-
-<!-- Chart.js Library -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
-
 </body>
-
 </html>
